@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>两个变量值交换的几种方法 | mudehao博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="两个变量值之间的互换 方法一：利用中间变量 换值1234567let a &#x3D; 20;let b &#x3D; 30;let c;c &#x3D; a;a &#x3D; b;b &#x3D; c;console.log(a,b);&#x2F;&#x2F;30  20       方法二：两个值之间做加减 换值123456let a &#x3D; 20;let b &#x3D; 30;a &#x3D; a+b;b &#x3D; a-b;a &#x3D; a-b;console.log(a,b);&#x2F;&#x2F;30  2">
+  <meta name="description" content="两个变量值之间的互换方法一：利用中间变量 换值1234567let a &#x3D; 20;let b &#x3D; 30;let c;c &#x3D; a;a &#x3D; b;b &#x3D; c;console.log(a,b);&#x2F;&#x2F;30  20    方法二：两个值之间做加减 换值123456let a &#x3D; 20;let b &#x3D; 30;a &#x3D; a+b;b &#x3D; a-b;a &#x3D; a-b;console.log(a,b);&#x2F;&#x2F;30  20">
 <meta property="og:type" content="article">
 <meta property="og:title" content="两个变量值交换的几种方法">
 <meta property="og:url" content="http://yoursite.com/2020/09/02/%E4%B8%A4%E4%B8%AA%E5%8F%98%E9%87%8F%E5%80%BC%E4%BA%A4%E6%8D%A2%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="mudehao博客">
-<meta property="og:description" content="两个变量值之间的互换 方法一：利用中间变量 换值1234567let a &#x3D; 20;let b &#x3D; 30;let c;c &#x3D; a;a &#x3D; b;b &#x3D; c;console.log(a,b);&#x2F;&#x2F;30  20       方法二：两个值之间做加减 换值123456let a &#x3D; 20;let b &#x3D; 30;a &#x3D; a+b;b &#x3D; a-b;a &#x3D; a-b;console.log(a,b);&#x2F;&#x2F;30  2">
+<meta property="og:description" content="两个变量值之间的互换方法一：利用中间变量 换值1234567let a &#x3D; 20;let b &#x3D; 30;let c;c &#x3D; a;a &#x3D; b;b &#x3D; c;console.log(a,b);&#x2F;&#x2F;30  20    方法二：两个值之间做加减 换值123456let a &#x3D; 20;let b &#x3D; 30;a &#x3D; a+b;b &#x3D; a-b;a &#x3D; a-b;console.log(a,b);&#x2F;&#x2F;30  20">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-09-02T06:30:01.000Z">
-<meta property="article:modified_time" content="2020-09-02T06:31:40.813Z">
+<meta property="article:published_time" content="2020-09-02T15:05:01.000Z">
+<meta property="article:modified_time" content="2020-09-02T15:05:33.674Z">
 <meta property="article:author" content="zzh">
 <meta property="article:tag" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,编程,代码,开源,IT网站,html,css,css3,用户体验">
 <meta name="twitter:card" content="summary">
@@ -176,38 +176,26 @@
 
         
         <a href="/2020/09/02/%E4%B8%A4%E4%B8%AA%E5%8F%98%E9%87%8F%E5%80%BC%E4%BA%A4%E6%8D%A2%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-09-02T06:30:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-02</time>
+  	<time datetime="2020-09-02T15:05:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="两个变量值之间的互换"><a href="#两个变量值之间的互换" class="headerlink" title="两个变量值之间的互换"></a>两个变量值之间的互换</h3><ol>
-<li><h5 id="方法一：利用中间变量-换值"><a href="#方法一：利用中间变量-换值" class="headerlink" title="方法一：利用中间变量 换值"></a>方法一：利用中间变量 换值</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">30</span>;</span><br><span class="line"><span class="keyword">let</span> c;</span><br><span class="line">c = a;</span><br><span class="line">a = b;</span><br><span class="line">b = c;</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30  20</span></span><br></pre></td></tr></table></figure>
+        <h3 id="两个变量值之间的互换"><a href="#两个变量值之间的互换" class="headerlink" title="两个变量值之间的互换"></a>两个变量值之间的互换</h3><h5 id="方法一：利用中间变量-换值"><a href="#方法一：利用中间变量-换值" class="headerlink" title="方法一：利用中间变量 换值"></a>方法一：利用中间变量 换值</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">30</span>;</span><br><span class="line"><span class="keyword">let</span> c;</span><br><span class="line">c = a;</span><br><span class="line">a = b;</span><br><span class="line">b = c;</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30  20</span></span><br></pre></td></tr></table></figure>
 
 
 
-</li>
-</ol>
-<ol start="2">
-<li><h5 id="方法二：两个值之间做加减-换值"><a href="#方法二：两个值之间做加减-换值" class="headerlink" title="方法二：两个值之间做加减 换值"></a>方法二：两个值之间做加减 换值</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">30</span>;</span><br><span class="line">a = a+b;</span><br><span class="line">b = a-b;</span><br><span class="line">a = a-b;</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30  20</span></span><br></pre></td></tr></table></figure>
+<h5 id="方法二：两个值之间做加减-换值"><a href="#方法二：两个值之间做加减-换值" class="headerlink" title="方法二：两个值之间做加减 换值"></a>方法二：两个值之间做加减 换值</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">30</span>;</span><br><span class="line">a = a+b;</span><br><span class="line">b = a-b;</span><br><span class="line">a = a-b;</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30  20</span></span><br></pre></td></tr></table></figure>
 
 
 
-</li>
-</ol>
-<ol start="3">
-<li><h5 id="方法三：异或-换值"><a href="#方法三：异或-换值" class="headerlink" title="方法三：异或 换值"></a>方法三：异或 换值</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">30</span>;</span><br><span class="line">a = a^b;</span><br><span class="line">b = a^b;</span><br><span class="line">a = a^b;</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30  20</span></span><br></pre></td></tr></table></figure>
+<h5 id="方法三：异或-换值"><a href="#方法三：异或-换值" class="headerlink" title="方法三：异或 换值"></a>方法三：异或 换值</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">30</span>;</span><br><span class="line">a = a^b;</span><br><span class="line">b = a^b;</span><br><span class="line">a = a^b;</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30  20</span></span><br></pre></td></tr></table></figure>
 
 
 
-</li>
-</ol>
-<ol start="4">
-<li><h5 id="方法四：ES6解构赋值-换值"><a href="#方法四：ES6解构赋值-换值" class="headerlink" title="方法四：ES6解构赋值 换值"></a>方法四：ES6解构赋值 换值</h5></li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span>[a,b] = [<span class="number">20</span>,<span class="number">30</span>];</span><br><span class="line">[a,b] = [b,a];</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30 20</span></span><br></pre></td></tr></table></figure>
+<h5 id="方法四：ES6解构赋值-换值"><a href="#方法四：ES6解构赋值-换值" class="headerlink" title="方法四：ES6解构赋值 换值"></a>方法四：ES6解构赋值 换值</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span>[a,b] = [<span class="number">20</span>,<span class="number">30</span>];</span><br><span class="line">[a,b] = [b,a];</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30 20</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="我举个例子："><a href="#我举个例子：" class="headerlink" title="我举个例子："></a>我举个例子：</h5><h6 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">2</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">7</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i+<span class="number">1</span>; j &lt; arr.length-i; j++) &#123;</span><br><span class="line">        <span class="comment">//判断两个数大小，决定是否交换</span></span><br><span class="line">        <span class="keyword">if</span>(arr[i]&gt;arr[j])&#123;</span><br><span class="line">            <span class="comment">//ES6解构赋值交换</span></span><br><span class="line">	       [arr[i],arr[j]] =[arr[j],arr[i]];</span><br><span class="line">        &#125;</span><br><span class="line">                </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[2,3,4,5,6,7,8]</span></span><br></pre></td></tr></table></figure>
 

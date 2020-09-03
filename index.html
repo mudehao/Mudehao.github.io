@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>mudehao博客</title>
+  <title>mudehao的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="mudehao博客">
+<meta property="og:title" content="mudehao的博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="mudehao博客">
+<meta property="og:site_name" content="mudehao的博客">
 <meta property="og:locale">
 <meta property="article:author" content="zzh">
 <meta property="article:tag" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,编程,代码,开源,IT网站,html,css,css3,用户体验">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="mudehao博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="mudehao的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -68,8 +68,6 @@
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -181,23 +179,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="两个变量值之间的互换"><a href="#两个变量值之间的互换" class="headerlink" title="两个变量值之间的互换"></a>两个变量值之间的互换</h3><h5 id="方法一：利用中间变量-换值"><a href="#方法一：利用中间变量-换值" class="headerlink" title="方法一：利用中间变量 换值"></a>方法一：利用中间变量 换值</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">30</span>;</span><br><span class="line"><span class="keyword">let</span> c;</span><br><span class="line">c = a;</span><br><span class="line">a = b;</span><br><span class="line">b = c;</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30  20</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="方法二：两个值之间做加减-换值"><a href="#方法二：两个值之间做加减-换值" class="headerlink" title="方法二：两个值之间做加减 换值"></a>方法二：两个值之间做加减 换值</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">30</span>;</span><br><span class="line">a = a+b;</span><br><span class="line">b = a-b;</span><br><span class="line">a = a-b;</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30  20</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="方法三：异或-换值"><a href="#方法三：异或-换值" class="headerlink" title="方法三：异或 换值"></a>方法三：异或 换值</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">30</span>;</span><br><span class="line">a = a^b;</span><br><span class="line">b = a^b;</span><br><span class="line">a = a^b;</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30  20</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="方法四：ES6解构赋值-换值"><a href="#方法四：ES6解构赋值-换值" class="headerlink" title="方法四：ES6解构赋值 换值"></a>方法四：ES6解构赋值 换值</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span>[a,b] = [<span class="number">20</span>,<span class="number">30</span>];</span><br><span class="line">[a,b] = [b,a];</span><br><span class="line"><span class="built_in">console</span>.log(a,b);<span class="comment">//30 20</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="我举个例子："><a href="#我举个例子：" class="headerlink" title="我举个例子："></a>我举个例子：</h5><h6 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">2</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">7</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i+<span class="number">1</span>; j &lt; arr.length-i; j++) &#123;</span><br><span class="line">        <span class="comment">//判断两个数大小，决定是否交换</span></span><br><span class="line">        <span class="keyword">if</span>(arr[i]&gt;arr[j])&#123;</span><br><span class="line">            <span class="comment">//ES6解构赋值交换</span></span><br><span class="line">	       [arr[i],arr[j]] =[arr[j],arr[i]];</span><br><span class="line">        &#125;</span><br><span class="line">                </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[2,3,4,5,6,7,8]</span></span><br></pre></td></tr></table></figure>
-
-
+        <p>两个变量之间的值互换的四种方法</p>
+        
+          <a class="article-more-a" href="/2020/09/02/%E4%B8%A4%E4%B8%AA%E5%8F%98%E9%87%8F%E5%80%BC%E4%BA%A4%E6%8D%A2%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/#more">more >></a>
+        
       
 
       
@@ -259,17 +244,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="cookie存储"><a href="#cookie存储" class="headerlink" title="cookie存储"></a>cookie存储</h3><h5 id="设置cookie-每次只能设置一个cookie"><a href="#设置cookie-每次只能设置一个cookie" class="headerlink" title="设置cookie:每次只能设置一个cookie"></a>设置cookie:每次只能设置一个cookie</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>( <span class="keyword">new</span> <span class="built_in">Date</span>().getTime() + <span class="number">7</span>*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>);<span class="comment">//设置了一个未来七天过期的时间戳;</span></span><br><span class="line"><span class="built_in">document</span>.cookie=<span class="string">&quot;name=狗蛋; expires =&quot;</span>+date.toUTCString();<span class="comment">//expires要接收国际标准时间</span></span><br><span class="line"><span class="built_in">document</span>.cookie=<span class="string">&quot;age=18&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<h5 id="获取cookie-不设置就是获取；获取时就是统一的"><a href="#获取cookie-不设置就是获取；获取时就是统一的" class="headerlink" title="获取cookie:不设置就是获取；获取时就是统一的"></a>获取cookie:不设置就是获取；获取时就是统一的</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( <span class="built_in">document</span>.cookie )  <span class="comment">//name=狗蛋 age=18 </span></span><br></pre></td></tr></table></figure>
-
-<h5 id="通过正则表达式，匹配cookie的内容"><a href="#通过正则表达式，匹配cookie的内容" class="headerlink" title="通过正则表达式，匹配cookie的内容"></a>通过正则表达式，匹配cookie的内容</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cookie = <span class="built_in">document</span>.cookie;</span><br><span class="line"><span class="keyword">let</span> key = <span class="string">&quot;age&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">`(^|\\s)<span class="subst">$&#123;key&#125;</span>=([^;]+)(;|$)`</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cookie.match(reg)[<span class="number">2</span>]);<span class="comment">//18</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="清除cookie-每次只能删除一个cookie；只要设置一个过期时间就会清除cookie了"><a href="#清除cookie-每次只能删除一个cookie；只要设置一个过期时间就会清除cookie了" class="headerlink" title="清除cookie:每次只能删除一个cookie；只要设置一个过期时间就会清除cookie了"></a>清除cookie:每次只能删除一个cookie；只要设置一个过期时间就会清除cookie了</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>( <span class="keyword">new</span> <span class="built_in">Date</span>().getTime() - <span class="number">7</span>*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>);<span class="comment">//设置了一个过去七天过期的时间戳;</span></span><br><span class="line"><span class="built_in">document</span>.cookie=<span class="string">&quot;name=小艾;expires=&quot;</span>+date.toUTCString()<span class="comment">//设置一个过期的cookie;删除了name的cookie的记录</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="封装好cookie的三个方法："><a href="#封装好cookie的三个方法：" class="headerlink" title="封装好cookie的三个方法："></a>封装好cookie的三个方法：</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> Cookie = &#123;</span><br><span class="line">    <span class="comment">//设置cookie</span></span><br><span class="line">    set (obj,day)&#123;</span><br><span class="line">        <span class="keyword">let</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>( <span class="keyword">new</span> <span class="built_in">Date</span>().getTime() + day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>).toUTCString();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> [key,value] <span class="keyword">of</span> <span class="built_in">Object</span>.entries(obj)) &#123;</span><br><span class="line">            <span class="built_in">document</span>.cookie = <span class="string">`<span class="subst">$&#123;key&#125;</span>=<span class="subst">$&#123;value&#125;</span>;expires=<span class="subst">$&#123;date&#125;</span>`</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//获取cookie</span></span><br><span class="line">    get (key)&#123;</span><br><span class="line">        <span class="built_in">document</span>.cookie.match(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">`(^|\\s)<span class="subst">$&#123;key&#125;</span>=([^;]+)(;|$)`</span>));</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">RegExp</span>.$<span class="number">2</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//清除cookie</span></span><br><span class="line">    remove (key)&#123;</span><br><span class="line">        <span class="built_in">this</span>.set(&#123;</span><br><span class="line">            [key]:<span class="string">&quot;&quot;</span><span class="comment">//变量当作对象属性，用中括号括起来</span></span><br><span class="line">        &#125;,<span class="number">-1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//传入要设置的cookie</span></span><br><span class="line"><span class="comment">// Cookie.set(&#123;</span></span><br><span class="line"><span class="comment">//     name:&quot;小艾&quot;,</span></span><br><span class="line"><span class="comment">//     age:18,</span></span><br><span class="line"><span class="comment">//     sex:&quot;女&quot;</span></span><br><span class="line"><span class="comment">// &#125;,365);</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//传入想要获取的cookie;把获取到的cookie打印</span></span><br><span class="line"><span class="comment">//console.log( Cookie.get(&quot;sex&quot;))</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//清除传入键的cookie</span></span><br><span class="line"><span class="comment">//Cookie.remove(&quot;age&quot;);</span></span><br></pre></td></tr></table></figure>
-
-
+        <p>cookie存储的使用</p>
+        
+          <a class="article-more-a" href="/2020/09/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/#more">more >></a>
+        
       
 
       
@@ -362,8 +340,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -375,15 +351,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -446,38 +420,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
